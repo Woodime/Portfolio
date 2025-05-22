@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f5f2ee;
+  --foreground: #1c0e08;
+  --forest: #37410f;
+  --color-mint-500: oklch(0.72 0.11 178);
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-tight: var(--font-geist-tight);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+}}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+@keyframes smooth-bounce {
+  0%, 100% { transform: translateY(0) scaleY(0.9); }
+  50% { transform: translateY(-5px) scaleY(1); }
+}
+
+.arrow-animation {
+  animation: smooth-bounce 1.5s infinite;
+  animation-play-state: paused;
+  transition: transform 0.3s ease-out;
+}
+
+.hero_button_group:hover .arrow-animation {
+  animation-play-state: running;
+}
+
+.hero_button_group:hover button {
+  font-weight: bold;
+}
