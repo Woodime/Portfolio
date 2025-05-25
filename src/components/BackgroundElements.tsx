@@ -1,10 +1,18 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image'
 
 const BackgroundElements = () => {
   return (
-    <div className="fixed inset-0 -z-10 bg-white"></div>
+    <div className="absolute flex justify-center items-center pl-270">
+      <Image 
+        src="/BackgroundCircleHero.png"
+        width={800}
+        height={800}
+        alt="Background Circle"
+      />
+    </div>
   );
 };
 

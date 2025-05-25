@@ -1,15 +1,21 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --background: #f5f2ee;
-  --foreground: #1c0e08;
+  --background: #0B3D2E;
   --forest: #37410f;
-  --color-mint-500: oklch(0.72 0.11 178);
+  --text: #ecf8f5;
+  --primary: #E6F2F0;
+  --secondary: #F28AB2;
+  --accent: #17f3b1;
 }
 
 @theme {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-foreground: var(--primary);
   --font-sans: var(--font-inter);
   --font-tight: var(--font-geist-tight);
 }
@@ -22,7 +28,7 @@
 
 body {
   background: var(--background);
-  color: var(--foreground);
+  color: var(--text);
   font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
@@ -43,4 +49,22 @@ body {
 
 .hero_button_group:hover button {
   font-weight: bold;
+}
+
+#image-track > .slider-image {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+  transition: object-position 0.7s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+#image-track {
+  transition: transform 0.7s cubic-bezier(0.33, 1, 0.68, 1); 
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(0%, -50%);
 }

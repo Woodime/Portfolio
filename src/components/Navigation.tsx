@@ -34,7 +34,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
             >
               {/* Black dot indicator for active section */}
               {activeSection === item.id && (
-                <span className="absolute left-0 top-1/2 -translate-y-1/2 h-2 w-2 bg-black rounded-full" />
+                <span className="absolute left-0 top-1/2 -translate-y-1/2 h-2 w-2 bg-(--primary) rounded-full" />
               )}
               {item.label}
             </Link>
